@@ -1,0 +1,16 @@
+<h1>Editing meeting</h1>
+
+<% form_for(@meeting) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @meeting %> |
+<%= link_to 'Back', meetings_path %>
